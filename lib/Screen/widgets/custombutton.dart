@@ -14,7 +14,9 @@ class Custombutton extends StatelessWidget {
       this.buttoncolor,
       this.gradientColor1,
       this.gradientColor2,
-      required this.borderRadius});
+      required this.borderRadius, 
+      this.onTap
+      });
   final String text;
   final double textfontSize;
   final Color textcolor;
@@ -26,25 +28,29 @@ class Custombutton extends StatelessWidget {
   final Color? gradientColor1;
   final Color? gradientColor2;
   final double borderRadius;
+  final Function()? onTap;
   @override
   Widget build(BuildContext context) {
-    return Container(
-        height: height,
-        width: width,
-        decoration: BoxDecoration(
-            color: applyGradientColor ? null : buttoncolor,
-            gradient: applyGradientColor
-                ? LinearGradient(
-                    colors: [gradientColor1!, gradientColor2!],
-                  )
-                : null,
-            borderRadius: BorderRadius.circular(borderRadius)),
-        child: Center(
-          child: Customtext(
-              text: text,
-              textfontSize: textfontSize,
-              textcolor: textcolor,
-              textfontweight: textfontweight),
-        ));
+    return GestureDetector(
+      onTap:onTap ,
+      child: Container(
+          height: height,
+          width: width,
+          decoration: BoxDecoration(
+              color: applyGradientColor ? null : buttoncolor,
+              gradient: applyGradientColor
+                  ? LinearGradient(
+                      colors: [gradientColor1!, gradientColor2!],
+                    )
+                  : null,
+              borderRadius: BorderRadius.circular(borderRadius)),
+          child: Center(
+            child: Customtext(
+                text: text,
+                textfontSize: textfontSize,
+                textcolor: textcolor,
+                textfontweight: textfontweight),
+          )),
+    );
   }
 }

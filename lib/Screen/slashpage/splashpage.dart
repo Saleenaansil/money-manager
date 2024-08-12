@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:get/get.dart';
+import 'package:miniproject1/Screen/onboarding/Onboardingpage.dart';
 import 'package:miniproject1/Screen/widgets/customtext.dart';
 
 class Splashpage extends StatelessWidget {
@@ -7,6 +9,7 @@ class Splashpage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    gotoOnboardingPage();
     return Scaffold(
       // backgroundColor: Color(0xff63B5AF),
       body: Container(
@@ -26,5 +29,12 @@ class Splashpage extends StatelessWidget {
                 textfontweight: FontWeight.w700)),
       ),
     );
+  }
+
+  gotoOnboardingPage() {
+    Future.delayed(Duration(milliseconds: 2000), () {
+      //Get.to(Onboardingpage());
+      Get.off(Onboardingpage());
+    });
   }
 }
