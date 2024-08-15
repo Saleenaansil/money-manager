@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:miniproject1/Core/Colors.dart';
 import 'package:miniproject1/Screen/Addexpense/Addexpense.dart';
 import 'package:miniproject1/Screen/Homepage/Homepage.dart';
 import 'package:miniproject1/Screen/NavBarcontroller/widgets/bottomnavbar.dart';
 import 'package:miniproject1/Screen/incomandexpense/incomandexpense.dart';
 import 'package:miniproject1/Screen/profile/profile.dart';
 import 'package:miniproject1/Screen/statistics/Statistics.dart';
+import 'package:miniproject1/Screen/widgets/customtext.dart';
 import 'package:miniproject1/controllers/appcontroller.dart';
 
 class Navbarcontrollingpage extends StatelessWidget {
@@ -13,7 +16,7 @@ class Navbarcontrollingpage extends StatelessWidget {
   List<Widget> pages = [
     Homepage(),
     Statistics(),
-   // Addexpense(),
+    // Addexpense(),
     Incomandexpense(),
     Profile(),
   ];
@@ -25,6 +28,12 @@ class Navbarcontrollingpage extends StatelessWidget {
         return pages[appController.bottomNavbarIndex.value];
       }),
       bottomNavigationBar: Bottomnavbar(),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        backgroundColor: mainAppColor,
+        child: SvgPicture.asset("asset/svg/bottomnavbar/Add.svg"),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
   }
 }
