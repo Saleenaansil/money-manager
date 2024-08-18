@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
@@ -43,7 +45,9 @@ class Bottomnavbar extends StatelessWidget {
                 onTap: () {
                   appcontroller.bottomNavbarIndex.value = 2;
                   print("selectedwallet");
+                  log(appcontroller.bottomNavbarIndex.value.toString());
                 },
+
                 // child: appcontroller.bottomNavbarIndex.value == 2
                 //     ? SvgPicture.asset(
                 //         "asset/svg/bottomnavbar/selectedwallet.svg")

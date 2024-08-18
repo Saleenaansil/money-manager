@@ -63,6 +63,8 @@ flutter:
     - asset/onboarding_image.png
     - asset/svg/bottomnavbar/
     - asset/svg/Homepageimages/
+    - asset/svg/Addexpense/
+    - asset/svg/profileimages/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

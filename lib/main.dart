@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:miniproject1/Screen/Addexpense/Addexpense.dart';
 import 'package:miniproject1/Screen/NavBarcontroller/navBarcontrollingpage.dart';
 import 'package:miniproject1/Screen/NavBarcontroller/widgets/bottomnavbar.dart';
 import 'package:miniproject1/Screen/onboarding/Onboardingpage.dart';
+import 'package:miniproject1/Screen/profile/profile.dart';
 import 'package:miniproject1/Screen/slashpage/splashpage.dart';
 
 void main() {
@@ -18,8 +20,10 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       theme: ThemeData(useMaterial3: false),
       title: 'Flutter Demo',
-      // home: Splashpage(),
-      home: Navbarcontrollingpage(),
+      home: Splashpage(),
+      // home: Navbarcontrollingpage(),
+      //home: Addexpense(),
+      //home: Profile(),
     );
   }
 }

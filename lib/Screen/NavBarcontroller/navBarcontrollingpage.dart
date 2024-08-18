@@ -25,11 +25,14 @@ class Navbarcontrollingpage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Obx(() {
+        print("rebuilding");
         return pages[appController.bottomNavbarIndex.value];
       }),
       bottomNavigationBar: Bottomnavbar(),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          Get.to(() => Addexpense());
+        },
         backgroundColor: mainAppColor,
         child: SvgPicture.asset("asset/svg/bottomnavbar/Add.svg"),
       ),
